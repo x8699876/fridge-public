@@ -3,11 +3,190 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fridge</title>
-<meta http-equiv="refresh" content="0; url=privacy.html">
-<link rel="canonical" href="privacy.html">
+<meta name="robots" content="all">
+<meta name="description" content="Fridge — a refrigerator, freezer, and pantry inventory manager for iPhone and macOS. Track food, cut waste, and sync every space live across your household.">
+<title>Fridge — Household Storage Manager</title>
+<style>
+  :root {
+    --fg: #1d1d1f;
+    --muted: #6e6e73;
+    --accent: #0a84ff;
+    --rule: #e5e5ea;
+    --bg: #ffffff;
+    --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #f5f5f7;
+      --muted: #a1a1a6;
+      --accent: #0a84ff;
+      --rule: #38383a;
+      --bg: #000000;
+      --card: #1c1c1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.4rem; margin: 48px 0 16px; }
+  .tagline { font-size: 1.2rem; color: var(--muted); margin: 0 0 8px; }
+  .lead { font-size: 1.05rem; margin: 0 0 8px; }
+  p, li { color: var(--fg); }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { padding-left: 1.3em; }
+  li { margin: 10px 0; }
+  .feature-title { font-weight: 600; }
+  .langs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+  }
+  .langs li {
+    margin: 0;
+    background: var(--card);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.95rem;
+  }
+  .license {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px 24px;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .license p { color: var(--muted); margin: 0 0 12px; }
+  .license p:last-child { margin-bottom: 0; }
+  footer { color: var(--muted); font-size: 0.9rem; margin-top: 56px; }
+  footer a { color: var(--muted); }
+</style>
 </head>
 <body>
-<p><a href="privacy.html">Fridge Privacy Policy</a></p>
+<main>
+  <h1>Fridge</h1>
+  <p class="tagline">Household Storage Manager — for iPhone &amp; macOS</p>
+
+  <p class="lead">
+    A refrigerator/freezer inventory manager — also covering pantries, counters,
+    cabinets, and any other storage space. See what's in every space at a glance,
+    organize items by category, tag them by dish, keep shopping and wish lists,
+    and sync everything live across your household.
+  </p>
+  <p>
+    Know exactly what's in your fridge, freezer, and pantry — before you shop.
+    Track food, cut waste, and sync every space live across your household.
+  </p>
+
+  <hr>
+
+  <h2>How it helps your household</h2>
+  <ul>
+    <li><span class="feature-title">Find what's buried in the freezer.</span> Put a
+      numbered label (e.g. <code>#12</code>) on a bag or container, record the same
+      number in the app, and jump straight to it instead of digging.</li>
+    <li><span class="feature-title">Shop smarter.</span> Check what you already have
+      — and what's running low — before you leave, so you don't re-buy things or
+      forget the essentials.</li>
+    <li><span class="feature-title">Use it before it's wasted.</span> Track
+      added/expiry dates; items are flagged and sorted by what to eat first, cutting
+      spoilage and waste.</li>
+    <li><span class="feature-title">Keep the whole family in sync.</span> Everyone in
+      the household sees the same spaces and items live — one person adds groceries,
+      everyone's app updates.</li>
+    <li><span class="feature-title">Build the grocery run together.</span> Anyone can
+      start a shopping or wish list ("Bella's wishlist"), add items, and check them
+      off at the store as a shared, real-time list.</li>
+    <li><span class="feature-title">Cook from what you have.</span> Tag items by dish
+      so you can see which meals you can make with what's on hand.</li>
+    <li><span class="feature-title">Decide what to eat today.</span> Keep track of
+      your dish menus and recipes, and browse them for inspiration when no one can
+      decide on dinner.</li>
+    <li><span class="feature-title">Organize beyond the fridge.</span> Track the
+      pantry, counter, cabinets, and any other storage space — all in one place.</li>
+    <li><span class="feature-title">Never lose your data.</span> Link an Apple ID so
+      your household can be restored on a new or replaced phone.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Features</h2>
+  <ul>
+    <li><span class="feature-title">Spaces &amp; sections</span> — model fridges,
+      freezers, and general storage (pantry, counter, cabinets…) and the sections
+      within them.</li>
+    <li><span class="feature-title">Items</span> — name, quantity/unit, photo,
+      category, dish tags, dates, expiry.</li>
+    <li><span class="feature-title">Categories &amp; dish tags</span> — built-in
+      (seeded) plus custom.</li>
+    <li><span class="feature-title">Shopping / wish lists</span> — per-household
+      lists; add items, check off purchases (checked hidden by default), sort, edit,
+      creator/empty delete rules.</li>
+    <li><span class="feature-title">Household sharing</span> — invite family members
+      to join your household; everyone instantly sees items as they're added,
+      updated, or used up across every space.</li>
+    <li><span class="feature-title">Tap to link Apple ID</span> — link an Apple ID so
+      a solo household can be restored on a new device.</li>
+    <li><span class="feature-title">17 languages</span> — switch the app's language
+      in-app, applied at launch:
+      <ul class="langs">
+        <li>English</li>
+        <li>简体中文</li>
+        <li>繁体中文</li>
+        <li>Français</li>
+        <li>Español</li>
+        <li>Deutsch</li>
+        <li>日本語</li>
+        <li>한국어</li>
+        <li>हिन्दी</li>
+        <li>Português (Brasil)</li>
+        <li>العربية</li>
+        <li>Русский</li>
+        <li>Italiano</li>
+        <li>Bahasa Indonesia</li>
+        <li>Tiếng Việt</li>
+        <li>ไทย</li>
+        <li>Türkçe</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2>License</h2>
+  <div class="license">
+    <p>Copyright © 2026 MHI SOFT LLC. All rights reserved.</p>
+    <p>This software and its source code are the proprietary and confidential
+      property of MHI SOFT LLC. No part of this software may be reproduced,
+      distributed, modified, or used to create derivative works without the prior
+      written permission of MHI SOFT LLC.</p>
+    <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL MHI
+      SOFT LLC BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+      ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
+      WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+  </div>
+
+  <footer>
+    © 2026 MHI SOFT LLC. All rights reserved. &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</main>
 </body>
 </html>
