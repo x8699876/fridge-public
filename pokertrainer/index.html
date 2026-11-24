@@ -91,6 +91,23 @@
   .box p { margin: 0; color: var(--muted); }
   .icon { font-size: 1.6rem; margin-bottom: 6px; }
 
+  /* Export/import steps */
+  .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li {
+    position: relative; padding: 0 0 14px 40px; color: var(--muted); counter-increment: step;
+  }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 26px; height: 26px; border-radius: 50%; background: var(--gold); color: #fff;
+    font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; justify-content: center;
+  }
+  .steps li strong { color: var(--ink); }
+  .note-callout {
+    margin-top: 20px; padding: 14px 18px; border-radius: 12px;
+    background: var(--felt-dark); border: 1px solid var(--line); color: var(--muted); font-size: 0.96rem;
+  }
+  .note-callout strong { color: var(--ink); }
+
   .fair {
     background: linear-gradient(135deg, #fff8df, #ffffff);
     border: 1px solid rgba(183, 121, 0, 0.35);
@@ -150,6 +167,7 @@
       <li><a href="#fair">Fair deal</a></li>
       <li><a href="#players">Player types</a></li>
       <li><a href="#features">Features</a></li>
+      <li><a href="#share">Export &amp; import</a></li>
       <li><a href="#pricing">Free vs Pro</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -274,7 +292,7 @@
       <div class="box">
         <div class="icon">🗂️</div>
         <h3>Hand history &amp; replay</h3>
-        <p>In Free Trial and Pro, find a recorded hand, replay its action and board street by street, and save interesting spots to review later. Hand history and replay are locked in Free.</p>
+        <p>In Free Trial and Pro, find a recorded hand, replay its action and board street by street, and save interesting spots to review later. Export any saved hand in <strong>OHH</strong> (Open Hand History) format to share or study elsewhere, and import OHH hands from other devices or apps back into the app. Hand history and replay are locked in Free.</p>
       </div>
       <div class="box">
         <div class="icon">📋</div>
@@ -291,6 +309,66 @@
         <h3>Play money only</h3>
         <p>Practice with virtual chips only—no real-money wagers, chips to buy or cash-outs.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="share">
+  <div class="wrap">
+    <h2>Export &amp; import hands in <span class="tag">OHH format</span></h2>
+    <p class="sub">
+      Export a hand to review it anywhere — share it with a friend, a coach or an AI assistant,
+      talk it over, then import it back into Poker Trainer to <b>replay and review the hand in the
+      app</b>. Saved hands use <b>Open Hand History (OHH)</b>, a standard JSON format other poker
+      tools can read. Imported hands are validated and replayed before saving, so only playable
+      hands are kept. Poker Trainer imports <b>any OHH JSON file</b> — a <strong>.json</strong> or
+      <strong>.ohh.json</strong> from any app or source, not just hands it exported itself.
+    </p>
+    <div class="grid">
+      <div class="box">
+        <div class="icon">💻</div>
+        <h3>On Mac</h3>
+        <p style="margin-bottom:14px"><strong>Export</strong></p>
+        <ol class="steps">
+          <li>Open a saved hand in <strong>Hand History</strong>.</li>
+          <li>Click <strong>Share</strong> and choose AirDrop, Mail, Messages or Save&nbsp;to&nbsp;Files.</li>
+          <li>A <strong>.ohh.json</strong> file is sent — the hand in OHH format.</li>
+        </ol>
+        <p style="margin:16px 0 14px"><strong>Import</strong></p>
+        <ol class="steps">
+          <li>Right-click the <strong>.ohh.json</strong> file in Finder.</li>
+          <li>Choose <strong>Open With → Poker Trainer</strong>.</li>
+          <li>Review the hand in the preview, then tap <strong>Save</strong>.</li>
+        </ol>
+      </div>
+      <div class="box">
+        <div class="icon">📱</div>
+        <h3>On iPhone &amp; iPad</h3>
+        <p style="margin-bottom:14px"><strong>Export</strong></p>
+        <ol class="steps">
+          <li>Open a saved hand in <strong>Hand History</strong>.</li>
+          <li>Tap <strong>Share</strong> and pick AirDrop, Messages, Mail or Save&nbsp;to&nbsp;Files.</li>
+          <li>The hand is sent as a <strong>.ohh.json</strong> file.</li>
+        </ol>
+        <p style="margin:16px 0 14px"><strong>Import</strong></p>
+        <ol class="steps">
+          <li>In the <strong>Files</strong> app, touch and hold the <strong>.ohh.json</strong> file.</li>
+          <li>Tap <strong>Share</strong> and choose <strong>PokerTrainerShare</strong>, or use <strong>Open With → Poker Trainer</strong>.</li>
+          <li>Open Poker Trainer to review the hand, then tap <strong>Save</strong>.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="note-callout">
+      <strong>AirDrop:</strong> sending a hand between your Mac and iPhone works great.
+      On the receiving device the file lands in <strong>Downloads</strong> (Mac) or the
+      <strong>Files</strong> app (iPhone/iPad) — open it with Poker Trainer from there to review and
+      save. iOS keeps AirDropped files in Files rather than opening an app automatically.
+    </div>
+    <div class="note-callout">
+      <strong>Any OHH file works:</strong> you can import a plain <strong>.json</strong> OHH hand
+      from anywhere — another poker app, a tracker, a shared link or download — not only
+      <strong>.ohh.json</strong> files Poker Trainer exported. If it's valid OHH, it imports;
+      if not, Poker Trainer tells you why instead of saving a broken hand.
     </div>
   </div>
 </section>
